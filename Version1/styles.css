@@ -1,0 +1,82 @@
+.container {
+    position: relative;
+    width:1100px;
+    height:600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: limegreen 5px solid;
+    background-color: black;
+}
+
+.container .top-right-score {
+    id:top-right-score;
+    position: absolute;
+    top:0;
+    right:0;
+    height:20px;
+    width:100px;
+    box-shadow: 0 0 5px black;
+    border-radius: 10px;
+    background: #f9f9f1;
+    color: black;
+}
+
+.container .bottom-left-score {
+    id:top-right-score;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height:20px;
+    width:100px;
+    box-shadow: 0 0 5px black;
+    border-radius: 10px;
+    background: #f9f9f1;
+    color: black;
+}
+
+#player-hand {
+    position: absolute;
+    z-index: 10;
+    width: 900px;
+    bottom: 0;
+    left: 100px;
+    border: limegreen 1px solid;
+}
+
+#player-hand .handlist {
+    display: flex;
+    list-style: none;
+    width: 500px;
+    bottom: 0;
+    height: 120px;
+    float: left;
+    overflow: auto;
+}
+
+#player-hand .handlist li {
+    display: flex;
+    height: 120px;
+    color: white;
+}
+
+#player-hand .handlist img {
+    height: 100px;
+}
+
+.flexbox-container {
+    display: flex;
+    border: 1px solid red;
+}
+
+  
+
+
+button {
+    background-color: black;
+    border: limegreen 2px solid;
+    border-radius: 5px;
+    color: limegreen;
+    z-index: 10;
+
+}
