@@ -25,9 +25,9 @@ function Card(name, pack, code, rarity, color, faction, realm, cost, attack, def
 
 // Card Sets
 // Introduction Set 1
-const IP1001 = new Card("Zeus", "Introduction Pack 1", "IP1-001", "Starter", "Purple", "Ancient Gods", "Greek Pantheon", 10, 6, 6, "While Zeus is in The Rift, all Greek Pantheon Units get +2/+2", "images\Cards\IP01\IP1001 Zeus.png");
-const IP1002 = new Card("Athena", "Introduction Pack 1", "IP1-002", "Starter", "Purple", "Ancient Gods", "Greek Pantheon", 9, 6, 6, "While Athena is in The Rift, all opponent units get -1/-1", "images\Cards\IP01\IP1002 Athena.png");
-const IP1003 = new Card("Artemis", "Introduction Pack 1", "IP1-003", "Starter", "Yellow", "Ancient Gods", "Greek Pantheon", 8, 6, 4, "When Artemis enters The Rift, target 2 opponets cards with a cost of 3 or less and send them to The Abyss", "images\Cards\IP01\IP1003 Artemis.png");
+const IP1001 = new Card("Zeus", "Introduction Pack 1", "IP1-001", "Starter", "Purple", "Ancient Gods", "Greek Pantheon", 10, 6, 6, "While Zeus is in The Rift, all Greek Pantheon Units get +2/+2", "images/Cards/IP01/IP1001 Zeus.png");
+const IP1002 = new Card("Athena", "Introduction Pack 1", "IP1-002", "Starter", "Purple", "Ancient Gods", "Greek Pantheon", 9, 6, 6, "While Athena is in The Rift, all opponent units get -1/-1", "images/Cards/IP01/IP1002 Athena.png");
+const IP1003 = new Card("Artemis", "Introduction Pack 1", "IP1-003", "Starter", "Yellow", "Ancient Gods", "Greek Pantheon", 8, 6, 4, "When Artemis enters The Rift, target 2 opponets cards with a cost of 3 or less and send them to The Abyss", "images/Cards/IP01/IP1003 Artemis.png");
 const IP1004 = new Card("Ares", "Introduction Pack 1", "IP1-004", "Starter", "Purple", "Ancient Gods", "Greek Pantheon", 7, 5, 4, "When Ares enters The Rift, all Greek Pantheon Units get +1/0", "images/Cards/IP01/IP1004 Ares.png");
 const IP1005 = new Card("Charon", "Introduction Pack 1", "IP1-005", "Starter", "Brown", "Ancient Gods", "Greek Pantheon", 6, 3, 4, "When Charon enters The Rift, discard up to 3 cards. Charon gets +1/+1 for each", "images/Cards/IP01/IP1005 Charon.png");
 const IP1006 = new Card("Dionysus", "Introduction Pack 1", "IP1-006", "Starter", "Blue", "Ancient Gods", "Greek Pantheon", 5, 3, 3,  "When Dionysus enters The Rift, Draw 2 cards", "images/Cards/IP01/IP1006 Dionysus.png");
@@ -85,6 +85,10 @@ function shuffle(deck) {
     deck.sort(() => (Math.random() > .5) ? 1 : -1)
 }
 
+function displayCardInfo() {
+    // Code here to display card in card info section
+}
+
 function displayHandSize() {
     let handSize = document.querySelector("#player-hand .handlist").children.length;
   }
@@ -99,9 +103,9 @@ function drawHandUI () {
     }
     for(let i=0; i < cardNames.length; i++) {
         document.querySelector('#player-hand .handlist').innerHTML += `<li><img src="${player1.hand[i].image}"> </li>`
-
+        let last = document.querySelector('#player-hand .handlist').lastChild
+        last.setAttribute("onClick", "alert('clicked')")
     }
-
 }
 
 function drawCard(drawCount, deck, hand) {
@@ -190,9 +194,6 @@ function turnEnd(player1, player2) {
 }
 
 //HTML
-function updateScore_topRight() {
-    document.getElementById("top-right-score").innerHTML = player2.score;
-}
 function updateScore_bottomright() {
     document.getElementById("bottom-left-score").innerHTML = player1.score;
 }
