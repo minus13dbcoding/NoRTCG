@@ -8,15 +8,36 @@
 </head>
 <body>
     <div class="container">
-        <div class="top-right-score"></div>
-        <div class="bottom-left-score"></div>
-        <div id="player-hand">
-            <ul class="handlist">
-            </ul>
+        <div class="board">
+            <div class="opponentboard"></div>
+            <div class="playerboard"></div>
+            <div class="gameinfo">
+                <div class="bottom-left-score">
+                    <p>Turn</p>
+                    <p><b>PLAYER</b></p>
+                    <p>attack dfense score</p>
+                    <p>hand deck mana</p>
+                </div>
+                <div id="player-hand">
+                    <ul class="handlist">
+                    </ul>
+                </div>
+                <div class="bottom-right-score">
+                    <p>Turn</p>
+                    <p><b>OPPONENT</b></p>
+                    <p>attack dfense score</p>
+                    <p>hand deck mana</p>
+                </div>
+            </div>
         </div>
-        <button id="startGame" onclick="gameStart()">Start!</button>
+            
+        <div class="cardinfo">
+            <button id="startGame" onclick="gameStart()">Start!</button>
+            <br>
+            <img src="C:\Users\CStew\Documents\js\nor\Version1\images\Cards\IP01\IP1001 Zeus.png" alt="">
+        </div>
         
      </div>
-    <script src="index,js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
